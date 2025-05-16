@@ -27,8 +27,8 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(812, 599)
-        self.meniLoadFile = QAction(MainWindow)
-        self.meniLoadFile.setObjectName(u"meniLoadFile")
+        self.menuLoadFile = QAction(MainWindow)
+        self.menuLoadFile.setObjectName(u"menuLoadFile")
         self.menuExit = QAction(MainWindow)
         self.menuExit.setObjectName(u"menuExit")
         self.centralwidget = QWidget(MainWindow)
@@ -142,7 +142,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.menubar.addAction(self.menuOption.menuAction())
-        self.menuOption.addAction(self.meniLoadFile)
+        self.menuOption.addAction(self.menuLoadFile)
         self.menuOption.addAction(self.menuExit)
 
         self.retranslateUi(MainWindow)
@@ -153,7 +153,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.meniLoadFile.setText(QCoreApplication.translate("MainWindow", u"Load file", None))
+        self.menuLoadFile.setText(QCoreApplication.translate("MainWindow", u"Load file", None))
         self.menuExit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
         self.selectFileButton.setText(QCoreApplication.translate("MainWindow", u"Select File", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"No file selected", None))

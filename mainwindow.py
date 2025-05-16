@@ -24,6 +24,7 @@ class MainWindow(QMainWindow):
         self.hide_plotNumbers()
 
         self.ui.selectFileButton.clicked.connect(self.updateGraphs)
+        self.ui.menuLoadFile.triggered.connect(self.updateGraphs)
 
         self.ui.playButton.clicked.connect(self.playAudio)
         self.ui.stopButton.clicked.connect(self.stopAudio)

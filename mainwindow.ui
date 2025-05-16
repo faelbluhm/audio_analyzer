@@ -152,13 +152,13 @@
     <property name="title">
      <string>Menu</string>
     </property>
-    <addaction name="meniLoadFile"/>
+    <addaction name="menuLoadFile"/>
     <addaction name="menuExit"/>
    </widget>
    <addaction name="menuOption"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="meniLoadFile">
+  <action name="menuLoadFile">
    <property name="text">
     <string>Load file</string>
    </property>
