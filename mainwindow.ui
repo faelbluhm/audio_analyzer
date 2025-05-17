@@ -137,6 +137,13 @@
       </layout>
      </widget>
     </item>
+    <item>
+     <widget class="QLabel" name="labelFrequnc">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -157,7 +164,6 @@
    </widget>
    <addaction name="menuOption"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="menuLoadFile">
    <property name="text">
     <string>Load file</string>

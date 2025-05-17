@@ -40,14 +40,15 @@ class MainWindow(QMainWindow):
         if self.file_path:
             self.ui.label.setText(self.file_path)
 
-            time, data, freqs, fft_magnitude = process_wav_file(self.file_path)
+            time, data, freqs, fft_magnitude, formatted_freqs = process_wav_file(self.file_path)
 
             self.ui.timePlotWidget.clear()
             self.ui.timePlotWidget.plot(time, data, pen=pg.mkPen('b', width=1))
 
             self.ui.freqPlotWidget.clear()
             self.ui.freqPlotWidget.plot(freqs, fft_magnitude, pen=pg.mkPen('b', width=1))
-            self.ui.freqPlotWidget.setXRange(0, len(freqs), padding=False)    
+            self.ui.freqPlotWidget.setXRange(0, len(freqs), padding=False)  
+            self.ui.labelFrequnc.setText(f"Highest frequncies:\n" + formatted_freqs)  
 
             self.show_plotNumbers()
     

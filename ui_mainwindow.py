@@ -18,7 +18,7 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QHBoxLayout, QLabel, QMainWindow,
     QMenu, QMenuBar, QPushButton, QSizePolicy,
-    QSpacerItem, QStatusBar, QVBoxLayout, QWidget)
+    QSpacerItem, QVBoxLayout, QWidget)
 
 from pyqtgraph import PlotWidget
 
@@ -130,6 +130,11 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_5.addWidget(self.plotWidget)
 
+        self.labelFrequnc = QLabel(self.centralwidget)
+        self.labelFrequnc.setObjectName(u"labelFrequnc")
+
+        self.verticalLayout_5.addWidget(self.labelFrequnc)
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -137,9 +142,6 @@ class Ui_MainWindow(object):
         self.menuOption = QMenu(self.menubar)
         self.menuOption.setObjectName(u"menuOption")
         MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QStatusBar(MainWindow)
-        self.statusbar.setObjectName(u"statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.menubar.addAction(self.menuOption.menuAction())
         self.menuOption.addAction(self.menuLoadFile)
@@ -159,6 +161,7 @@ class Ui_MainWindow(object):
         self.label.setText(QCoreApplication.translate("MainWindow", u"No file selected", None))
         self.playButton.setText(QCoreApplication.translate("MainWindow", u"Play", None))
         self.stopButton.setText(QCoreApplication.translate("MainWindow", u"Stop", None))
+        self.labelFrequnc.setText("")
         self.menuOption.setTitle(QCoreApplication.translate("MainWindow", u"Menu", None))
     # retranslateUi
 
