@@ -28,9 +28,6 @@ The GUI is designed using Qt Designer (`ui_mainwindow.ui`) and converted to Pyth
 Clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/your-username/audio-frequency-viewer.git
-cd audio-frequency-viewer
-
 pip install -r requirements.txt
 ```
 
